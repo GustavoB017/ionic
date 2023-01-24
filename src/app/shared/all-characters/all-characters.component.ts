@@ -17,6 +17,15 @@ export class AllCharactersComponent implements OnInit {
     private modalController: ModalController
     ) { }
 
+    toogleTheme(event){
+      console.log(event);
+      if(event.detail.checked){
+        document.body.setAttribute('color-theme','dark')
+      }else{
+        document.body.setAttribute('color-theme','light')
+      }
+    }
+
   ngOnInit() {
     this.randmService.getAllCharacters().then( (res: any) => {
       this.allCharacters = res;

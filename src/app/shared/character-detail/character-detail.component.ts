@@ -9,7 +9,7 @@ import { ModalController } from '@ionic/angular';
 export class CharacterDetailComponent implements OnInit {
   @Input() character: any;
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController) { }  
 
   ngOnInit() {
     console.log(this.character);
